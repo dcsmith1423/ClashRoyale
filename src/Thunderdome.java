@@ -5,19 +5,19 @@ public class Thunderdome {
 		// GENEREATE THE 2 UNITS FOR THE FIGHT
 //		double battleTime = 0;
 		int battleTime = 0;
-		double totalTime = battleTime/10;
+//		double totalTime = battleTime/10;
 		
 		ClashUnit [] card = new ClashUnit[2];
 		
 		card[0] = new ClashUnit();
 		card[1] = new ClashUnit();
 		
-//		card[0].name.equals("Giant Skeleton");
+		card[0].name = "Giant Skeleton";
 		card[0].attackDmg = 100;
 		card[0].attackSpeed = 15;
 		card[0].unitHealth = 2000;
 
-//		card[1].name.equals("PEKKA");
+		card[1].name = "PEKKA";
 		card[1].attackDmg = 450;
 		card[1].attackSpeed = 18;
 		card[1].unitHealth = 2610;
@@ -45,14 +45,14 @@ public class Thunderdome {
 				} else {
 					if (card[0].unitHealth > 0) {
 						card[0].wins++;
-						System.out.println("Giant Skeleton" + " wins!");
+						System.out.println(card[0].name + " wins!");
 						System.out.println(" with " + card[0].unitHealth + " HP remaining.");
 						System.out.println("Battle Time = " + battleTime);
 						card[1].isAlive = false;
 					} else {
 						card[0].isAlive = false;
 						card[1].wins++;
-						System.out.println("PEKKA" + " wins!");
+						System.out.println(card[1].name + " wins!");
 						System.out.println("with " + card[1].unitHealth + " HP remaining.");
 						System.out.println("Battle Time = " + battleTime);
 						card[0].isAlive = false;
